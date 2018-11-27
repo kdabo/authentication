@@ -1,5 +1,4 @@
 /node_modules
-.idea/
 npm-debug.log
 .DS_Store
 
@@ -7,3 +6,4 @@ npm-debug.log
 
 # IntelliJ
 *.iml
+/.idea
