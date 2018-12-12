@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // DB SETUP
 mongoose.connect('mongodb://localhost:27017/authentication', { useNewUrlParser: true });
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/authentication', { useNewUrlParser: 
 // morgan is loging framework which is used to log incoming server requests
 // bodyparser is parsing incoming request, specifically json
 app.use(morgan('combined'));
+app.use(cors());
 app.use(bodyparser.json({ type: '*/*' }));
 router(app);
 
